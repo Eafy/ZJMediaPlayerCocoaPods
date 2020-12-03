@@ -2,10 +2,7 @@ Pod::Spec.new do |s|
   s.name         = "ZJMediaPlayer"
   s.version      = "1.0.0"
   s.summary      = "ZJ Meida Player SDK for iOS at CocoaPods."
-
-  s.description  = <<-DESC
-	  ZJ Meida Player SDK for iOS at CocoaPods.
-                   DESC
+  s.description  = "ZJ Meida Player SDK for iOS at CocoaPods."
 
   s.homepage     = "https://github.com/Eafy/ZJMediaPlayerCocoaPads"
   s.license      = { :type => "Apache License 2.0" }
@@ -19,6 +16,7 @@ Pod::Spec.new do |s|
   
   s.source       = { :git => "https://github.com/Eafy/ZJMediaPlayerCocoaPods.git", :tag => "v#{s.version}" }
   s.ios.vendored_frameworks = "ZJMediaPlayer.framework"
+  s.vendored_libraries = 'ZJMediaPlayer.framework/**/*.a'
 
 end
 
