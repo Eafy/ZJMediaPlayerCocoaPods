@@ -1,1 +1,1 @@
-# ZJMediaPlayerCocoaPads
+# ZJMediaPlayerCocoaPods
