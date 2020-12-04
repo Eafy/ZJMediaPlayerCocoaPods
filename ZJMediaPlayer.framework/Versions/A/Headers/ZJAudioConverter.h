@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
-#import <ZJBaseUtils/ZJSingleton.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJAudioConverter : NSObject
-singleton_h();
+
++ (instancetype _Nonnull)shared;
 
 /// 数据包编码帧数（AAC默认1024，其他默认1）
 @property (nonatomic,assign) UInt32 framesPerPacket;

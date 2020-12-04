@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
-#import <ZJBaseUtils/ZJSingleton.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJAudioAECPlayer : NSObject
-singleton_h();
+
++ (instancetype _Nonnull)shared;
 
 /// 是否开启回音消除（默认开启）
 @property (nonatomic,assign) BOOL aecEnable;

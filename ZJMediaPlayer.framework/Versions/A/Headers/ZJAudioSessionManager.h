@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ZJBaseUtils/ZJSingleton.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,7 +17,8 @@ typedef NS_ENUM(NSUInteger, ZJAudioSessionMode) {
 };
 
 @interface ZJAudioSessionManager : NSObject
-singleton_h();
+
++ (instancetype _Nonnull)shared;
 
 - (void)openAudio:(ZJAudioSessionMode)mode handler:(void(^_Nullable)(BOOL success))handler;
 
