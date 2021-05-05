@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ZJMediaPlayer"
-  s.version      = "1.0.2-beta1"
+  s.version      = "1.0.3"
   s.summary      = "ZJ Meida Player SDK for iOS at CocoaPods."
   s.description  = "ZJ Meida Player SDK for iOS at CocoaPods."
 
@@ -9,6 +9,9 @@ Pod::Spec.new do |s|
   s.author       = { "Eafy" => "lizhijian_21@163.com" }
   s.platform     = :ios, "9.0"
   s.requires_arc = true
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
   s.libraries = 'c++','z','bz2','iconv'
   s.frameworks = 'CoreMedia','VideoToolbox','AudioToolbox', 'AVFoundation','OpenGLES','GLKit'
   s.dependency 'ZJLog'
