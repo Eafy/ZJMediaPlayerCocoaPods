@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name         = "ZJMediaPlayer"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "ZJ Meida Player SDK for iOS at CocoaPods."
-  s.description  = "ZJ Meida Player SDK for iOS at CocoaPods."
+  s.description  = "ZJ Meida Player SDK for iOS at CocoaPods，Supported H.264、Hevc、AAC and other formats."
 
   s.homepage     = "https://github.com/Eafy/ZJMediaPlayerCocoaPads"
   s.license      = { :type => "Apache License 2.0" }
