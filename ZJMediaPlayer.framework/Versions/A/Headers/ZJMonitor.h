@@ -12,7 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJMonitor : UIImageView
 
-
 /// 显示图片
 /// @param image UIImage
 - (void)displayImage:(UIImage *)image;
@@ -22,6 +21,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param width 宽
 /// @param height 高
 - (void)displayRgb24Data:(const u_char *)rgbData videoWidth:(NSInteger)width videoHeight:(NSInteger)height;
+
+/// 加载YUV420（NV12）数据
+/// @param y y数据
+/// @param uv uv数据
+/// @param w 宽度
+/// @param h 高度
+- (void)displayYuv420Data:(u_char *)y uv:(u_char *)uv w:(NSInteger)w h:(NSInteger)h;
 
 @end
 

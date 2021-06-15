@@ -14,10 +14,16 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef enum : NSUInteger {
+<<<<<<< HEAD
     ZJHWDataShowType_Image = 0,       //缺省图形，只可显示，无法保存为图片文件
     ZJHWDataShowType_Image_Perfect,   //完整图形，可直接保存为图片文件
     ZJHWDataShowType_Pixel,           //YUV，Plane通道为3
     ZJHWDataShowType_Pixel_Nv12,      //YUV，Plane通道为2
+=======
+    ZJHWDataShowType_Pixel,           //YUV，Plane通道为3
+    ZJHWDataShowType_Pixel_Nv12,      //YUV，Plane通道为2
+    ZJHWDataShowType_Image,           //UIImage图形
+>>>>>>> dc16db7821418feffdb7e938d94ee16a7eee755e
     ZJHWDataShowType_Layer,           //仅显示图层
 } ZJHWDataShowType;
 
@@ -36,6 +42,11 @@ typedef enum : NSUInteger {
 @property (nonatomic,assign) ZJHWDataShowType showType;    //显示类型
 /// 解码失败最大次数，默认3次
 @property (nonatomic,assign) NSInteger decodeMaxFailCount;
+<<<<<<< HEAD
+=======
+/// 设置是否在后台，后台则不会解码
+@property (readonly) BOOL isBackground;
+>>>>>>> dc16db7821418feffdb7e938d94ee16a7eee755e
 
 @property (nonatomic,strong) UIImage * _Nullable image;            //解码成RGB数据时的IMG
 @property (nonatomic,assign) CVPixelBufferRef _Nullable pixelBuffer;    //解码成YUV420P数据时的解码BUF
@@ -54,10 +65,13 @@ typedef enum : NSUInteger {
 ///  释放解码器
 - (void)releaseHwDecoder;
 
+<<<<<<< HEAD
 /// 根据CVPixelBufferRef获取UIImage（不可保存为文件）
 /// @param pixelBuffer CVPixelBufferRef
 - (UIImage *)pixelBufferToImage:(CVPixelBufferRef)pixelBuffer;
 
+=======
+>>>>>>> dc16db7821418feffdb7e938d94ee16a7eee755e
 /// 根据CVPixelBufferRef获取UIImage（可保存为文件）
 /// @param pixelBuffer CVPixelBufferRef
 - (UIImage *)pixelBufferToPerfectImage:(CVPixelBufferRef)pixelBuffer;

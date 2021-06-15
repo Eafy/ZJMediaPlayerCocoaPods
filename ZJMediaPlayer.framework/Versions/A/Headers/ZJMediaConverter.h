@@ -1,5 +1,5 @@
 //
-//  ZJMeidaConverter.h
+//  ZJMediaConverter.h
 //  ZJMediaPlayer
 //
 //  Created by eafy on 2020/10/25.
@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZJMeidaEnum.h"
+#import "ZJMediaEnum.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZJMeidaConverter : NSObject
+@interface ZJMediaConverter : NSObject
 
 /// 是否为AAC添加ADTS头
 @property (nonatomic,assign) BOOL addADTSEnable;

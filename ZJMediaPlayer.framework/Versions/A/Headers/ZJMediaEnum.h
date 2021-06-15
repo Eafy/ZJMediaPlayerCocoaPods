@@ -1,13 +1,13 @@
 //
-//  ZJMeidaEnum.h
+//  ZJMediaEnum.h
 //  ZJMediaPlayer
 //
 //  Created by eafy on 2020/10/2.
 //  Copyright © 2020 ZJ<lizhijian_21@163.com>. All rights reserved.
 //
 
-#ifndef ZJMeidaEnum_h
-#define ZJMeidaEnum_h
+#ifndef ZJMediaEnum_h
+#define ZJMediaEnum_h
 
 /*转换前的编码格式*/
 typedef enum {
@@ -96,7 +96,11 @@ typedef enum {
     ZJ_MEDIA_RECORD_STATUS_START,               //开始录制
     ZJ_MEDIA_RECORD_STATUS_COMPLETE,            //录制完成
     ZJ_MEDIA_RECORD_STATUS_FAILED,              //录制失败
+    
     ZJ_MEDIA_RECORD_STATUS_RECORDING,           //正在录制
+    ZJ_MEDIA_RECORD_STATUS_PATH_INVALID,         //路径无效
+    ZJ_MEDIA_RECORD_STATUS_VIDEO_NO_START,         //未开始播放视频
+    ZJ_MEDIA_RECORD_STATUS_NO_START,            //录制未真正开始
 } ZJ_MEDIA_RECORD_STATUS;
 
 //对讲状态枚举
@@ -111,16 +115,16 @@ typedef enum {
 //多媒体音视频裸流参数配置
 typedef struct ZJMediaStreamConfig {
     ZJ_MEDIA_TYPE videoMediaType;       //自定义编码ID
-    ZJ_FMT_TYPE videoFrameFormat;       //需要转换的帧格式
+//    ZJ_FMT_TYPE videoFrameFormat;       //需要转换的帧格式
     int videoFrameRate;
     int64_t videoBitRate;
 
-    ZJ_MEDIA_TYPE audioMeidaType;       //自定义编码ID
-    ZJ_FMT_TYPE audioFrameFormat;       //需要转换的帧格式
+    ZJ_MEDIA_TYPE audiomediaType;       //自定义编码ID
+//    ZJ_FMT_TYPE audioFrameFormat;       //需要转换的帧格式
     int audioSampleRate;
     int64_t audioBitRate;
     int audioChannels;
 } ZJMediaStreamConfig;
 
 
-#endif /* ZJMeidaEnum_h */
+#endif /* ZJMediaEnum_h */
