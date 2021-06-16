@@ -1,5 +1,5 @@
 //
-//  ZJMediaPlayer.h
+//  ZJMediaNetworkPlayer.h
 //  ZJMediaPlayer
 //
 //  Created by eafy on 2020/10/2.
@@ -14,5 +14,23 @@
 #import "ZJHevcHwDecoder.h"
 #import "ZJMonitor.h"
 #import "ZJGLMonitor.h"
-#import "ZJMediaNetworkPlayer.h"
-#import "ZJMediaFilePlayer.h"
+#import "ZJMediaStreamPlayer.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface ZJMediaPlayer : ZJMediaStreamPlayer
+
+/// 开始播放网络流视频
+/// @param url RTMP地址
+- (void)start:(NSString *)url;
+
+/// 重新拉流播放
+- (BOOL)restart;
+
+/// 定位（仅本地文件有效）
+/// @param msTime 毫秒
+- (BOOL)seek:(NSInteger)msTime;
+
+@end
+
+NS_ASSUME_NONNULL_END

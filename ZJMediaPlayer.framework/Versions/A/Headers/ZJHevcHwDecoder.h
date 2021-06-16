@@ -2,7 +2,7 @@
 //  ZJHevcHwDecoder.h
 //  ZJMediaPlayer
 //
-//  Created by lzj on 2021/5/12.
+//  Created by eafy on 2021/5/12.
 //  Copyright © 2021 ZJ<lizhijian_21@163.com>. All rights reserved.
 //
 

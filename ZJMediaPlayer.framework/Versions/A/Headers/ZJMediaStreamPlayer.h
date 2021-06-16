@@ -10,6 +10,7 @@
 #import "ZJMediaEnum.h"
 #import "ZJMediaErrno.h"
 #import "ZJGLMonitor.h"
+#import "ZJMediaStatisticalInfo.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -88,6 +89,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ZJMediaPlayerDelegate <NSObject>
 @optional
+
+/// 视频播放状态
+/// @param status 播放状态，JM_MEDIA_PLAY_STATUS，收到调停止接口不会回调
+/// @param errCode 错误码，0表示无错误
+- (void)didMediaPlayerPlay:(ZJMediaStreamPlayer *_Nonnull)player status:(ZJ_MEDIA_PLAY_STATUS)status errCode:(NSInteger)errCode;
+
+/// 音视频流信息(每秒更新一次，若视频宽高变化则会立即更新)
+/// @param player 播放器
+/// @param statInfo 统计信息对象
+- (void)didMediaPlayerStatisticalInfo:(ZJMediaStreamPlayer *_Nonnull)player statInfo:(ZJMediaStatisticalInfo *)statInfo;
 
 /// 视频录制回调函数
 /// @param status 录制状态

@@ -1,10 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ZJMediaPlayer"
-<<<<<<< HEAD
-  s.version      = "1.0.4"
-=======
-  s.version      = "1.0.6"
->>>>>>> dc16db7821418feffdb7e938d94ee16a7eee755e
+  s.version      = "1.0.7"
   s.summary      = "ZJ Meida Player SDK for iOS at CocoaPods."
   s.description  = "ZJ Meida Player SDK for iOS at CocoaPods，Supported H.264、Hevc、AAC and other formats."
 
