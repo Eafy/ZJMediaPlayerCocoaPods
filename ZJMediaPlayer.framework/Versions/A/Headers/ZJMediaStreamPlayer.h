@@ -22,6 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,weak) id<ZJMediaPlayerDelegate> _Nullable delegate;
 /// OpenGL视图(推荐)
 @property (nonatomic,strong) ZJGLMonitor * _Nullable glMonitor;
+/// 是否开启硬解码(默认开启，硬解码失败自动切换软解码)
+@property (nonatomic,assign) BOOL hwDecodeEnable;
+/// 是否静音
+@property (nonatomic,assign) BOOL mute;
 
 /// 视频播放配置参数
 /// @param config 配置表
@@ -30,20 +34,20 @@ NS_ASSUME_NONNULL_BEGIN
 /// 开始播放器
 - (BOOL)start;
 
-/// 开始播放视频
-- (BOOL)startVideo;
-
-/// 开始播放音频
-- (BOOL)startAudio;
-
 /// 停止播放
 - (void)stop;
 
-/// 停止播放视频
-- (void)stopVideo;
+/// 开启视频
+- (void)openVideo;
 
-/// 停止播放音频
-- (void)stopAudio;
+/// 开启音频
+- (void)openAudio;
+
+/// 关闭视频
+- (void)closeVideo;
+
+/// 关闭音频
+- (void)closeAudio;
 
 /// 播放视频数据
 /// @param data 数据区
@@ -67,6 +71,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param cacheTime 最小的缓存时间，默认1秒
 /// @param pursueTime 设置追赶时间，默认3秒
 - (void)setMediaCacheTime:(NSInteger)cacheTime pursueTime:(NSInteger)pursueTime;
+
+/// 设置降噪级别（0~3），0表示关闭
+/// @param nLevel 级别，默认3
+- (void)setDenoiseLevel:(NSUInteger)nLevel;
+
+/// 设置是否音视频同步
+/// @param sync 是否同步，默认NO
+- (void)setMediaSyncMode:(BOOL)sync;
 
 #pragma mark - 录制相关
 

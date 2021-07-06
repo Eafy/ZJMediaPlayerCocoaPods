@@ -22,8 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 ///@return 视图的宽高(width, height)，当为接收为AVSampleBufferDisplayLayer时返回接口是无效的
 - (CGSize)decodeHevcVideoData:(uint8_t *)videoData videoSize:(NSInteger)videoSize;
 
-/// 释放解码器
-- (void)releaseHwDecoder;
+/// HEVC视频流解码
+/// @param pkt 带解码的FFAVPacket视频包
+/// @param frame 待接收已解码的数据包，可填空，则内部会生成一个新的
+/// @return 已解码的数据包
+- (void *)decodeHevcVideoPacket:(void *)pkt frame:(void *)frame;
 
 @end
 

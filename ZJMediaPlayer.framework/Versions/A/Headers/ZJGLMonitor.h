@@ -13,9 +13,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum : NSUInteger {
+    ZJGLMonitorDisplayRatioType_Auto = 0,
+    ZJGLMonitorDisplayRatioType_1_1,    //正方形
+    ZJGLMonitorDisplayRatioType_16_9,
+    ZJGLMonitorDisplayRatioType_4_3,
+} ZJGLMonitorDisplayRatioType;
+
 /// ZJGLMonitor视图对模拟器不友好，最好使用真机调试
 @interface ZJGLMonitor : UIView
 
+/// 显示比例，默认Auto，自动时支持contentMode模式
+@property (nonatomic,assign) ZJGLMonitorDisplayRatioType displayRatioType;
 /// 获取截屏或设置图片
 @property (nonatomic,strong) UIImage *image;
 

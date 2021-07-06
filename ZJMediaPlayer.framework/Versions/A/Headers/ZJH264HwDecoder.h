@@ -45,10 +45,20 @@ typedef enum : NSUInteger {
 - (instancetype)init;
 
 /// H264视频流解码
+/// @param pkt 视频数据包(FFAVPacket)
+/// @param completion 状态码：0成功，已解码数据包(FFAVFrame)
+/// @return -1，需要再次喂数据，0：成功
+- (NSInteger)decodeH264VideoData:(void *)pkt completion:(void (^ __nullable)(NSInteger code, void *frame))completion;
+
+/// H264视频流解码（如果含有B帧需要自行排序）
 /// @param videoData 视频帧数据
 /// @param videoSize 视频帧大小
 /// @return 视图的宽高(width, height)，当为接收为AVSampleBufferDisplayLayer时返回接口是无效的
 - (CGSize)decodeH264VideoData:(uint8_t *)videoData videoSize:(NSInteger)videoSize;
+
+/// 冲洗缓存显示缓存队列，并清除待解码队列
+/// @return 如果存在清洗的情况则返回true,否则false
+- (BOOL)flush;
 
 /// 移除解码器
 - (void)removeHwDecoder;
@@ -61,6 +71,13 @@ typedef enum : NSUInteger {
 
 /// 视频截图
 - (UIImage *)snapshot;
+
+#pragma mark -
+
+/// 将CVPixelBufferRef转换为FFAVFrame视频包
+/// @param pixelBuffer 视频帧
+/// @param frame 数据包
++ (BOOL)pixelBufferToAVFrame:(CVPixelBufferRef)pixelBuffer frame:(void *)frame;
 
 @end
 
