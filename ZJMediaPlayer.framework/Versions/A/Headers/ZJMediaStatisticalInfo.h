@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,assign) NSInteger videoWidth;          //视频宽度
 @property (nonatomic,assign) NSInteger videoHeight;         //视频高度
+@property (nonatomic,assign) NSInteger videoFPS;            //视频帧率
 @property (nonatomic,assign) NSInteger videoBps;            //视频码率(s/Bps)
 @property (nonatomic,assign) NSInteger audioBps;            //音频码率(s/Bps)
 @property (nonatomic,assign) NSInteger timestamp;           //时间戳
