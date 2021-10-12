@@ -23,6 +23,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIImage *)getImageWithCBuff:(u_char *)buff width:(NSInteger)width height:(NSInteger)height;
 
+
+/// 从UIImage中获取RGBA数据(需要释放)
+/// @param image 图片
++ (u_int8_t *)getRGBAFromImage:(UIImage *)image;
+
+/// 从UIImage中获取RGB24数据(需要释放)
+/// @param image 图片
++ (u_int8_t *)getRGB24FromImage:(UIImage *)image;
+
 /**
  将YUV420P转化为RGB24数据
  
@@ -36,6 +45,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)getRGB24FromYUV420P:(u_char *)y u:(u_char *)u v:(u_char *)v linesize:(int *)linesize w:(int)w h:(int)h rgb:(u_char *)rgb;
 
+/// 将YUV420P转化为RGB24数据
+/// @param yuvY Y数据
+/// @param yuvU U数据
+/// @param yuvV V数据
+/// @param width 宽度
+/// @param height 高度
+/// @param rgb24 RGB缓存地址
++ (void)getRGB24FromYUV420P:(u_char *)yuvY u:(u_char *)yuvU v:(u_char *)yuvV width:(int)width height:(int)height rgb:(u_char *)rgb24;
+
 /**
  将RGB24转化为YUV420P数据
 
@@ -47,6 +65,20 @@ NS_ASSUME_NONNULL_BEGIN
  @param vBuf V缓存地址
  */
 + (void)getYUV420PFromRGB24:(u_char *)rgbBuf width:(NSInteger)width height:(NSInteger)height y:(u_char *)yBuf u:(u_char *)uBuf v:(u_char *)vBuf;
+
+/// 将NV21转化为RGB24数据
+/// @param yuyv NV21==YUV422
+/// @param rgb24 RGB24缓存
+/// @param width 画面宽度
+/// @param height 画面高度
++ (void)getRGB24FromNV21:(u_char *)yuyv rgb24:(u_char *)rgb24 width:(int)width height:(int)height;
+
+/// 将NV21转化为YUV420P数据
+/// @param yuyv NV21==YUV422
+/// @param yuv420p YUV420P缓存
+/// @param width 画面宽度
+/// @param height 画面高度
++ (void)getYUV420pFromNv21:(u_char *)yuyv yuv420p:(u_char *)yuv420p width:(int)width height:(int)height;
 
 /**
  RGB24转RGBA

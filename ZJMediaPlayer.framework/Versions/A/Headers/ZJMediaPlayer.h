@@ -14,6 +14,7 @@
 #import "ZJHevcHwDecoder.h"
 #import "ZJGLMonitor.h"
 #import "ZJMediaStreamPlayer.h"
+#import "ZJAuthManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

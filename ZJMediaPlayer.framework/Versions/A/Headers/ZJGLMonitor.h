@@ -25,8 +25,11 @@ typedef enum : NSUInteger {
 
 /// 显示比例，默认Auto，自动时支持contentMode模式
 @property (nonatomic,assign) ZJGLMonitorDisplayRatioType displayRatioType;
-/// 获取截屏或设置图片
+/// 设置图片、获取原始图片
 @property (nonatomic,strong) UIImage *image;
+
+/// 截屏
+- (UIImage *)snapshot;
 
 /// 加载CVPixelBufferRef类型的画面
 /// @param pixelBuffer CVPixelBufferRef
