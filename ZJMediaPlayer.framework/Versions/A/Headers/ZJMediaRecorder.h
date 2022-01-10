@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJMediaRecorder : NSObject
 
-@property (nonatomic,strong,readonly) ZJMediaRecorderConfig *config;
+@property (nonatomic,strong,readonly) ZJMediaRecorderConfig * _Nullable config;
 
 /// 配置录制参数
 /// @param config 配置信息
