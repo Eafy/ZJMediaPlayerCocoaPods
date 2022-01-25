@@ -121,7 +121,7 @@ typedef struct ZJMediaStreamConfig {
     int videoFrameRate;
     int64_t videoBitRate;
 
-    ZJ_MEDIA_TYPE audiomediaType;       //自定义编码ID
+    ZJ_MEDIA_TYPE audioMediaType;       //自定义编码ID
 //    ZJ_FMT_TYPE audioFrameFormat;       //需要转换的帧格式
     int audioSampleRate;
     int64_t audioBitRate;

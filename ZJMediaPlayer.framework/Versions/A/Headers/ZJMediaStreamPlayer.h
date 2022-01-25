@@ -52,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 播放视频数据
 /// @param data 数据区
 /// @param size 数据大小
-/// @param ts 时间戳
+/// @param ts 时间戳(毫秒)
 - (BOOL)playVideo:(u_char *)data size:(NSUInteger)size timestamp:(NSUInteger)ts;
 
 /// 播放音频数据
@@ -81,8 +81,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setMediaSyncMode:(BOOL)sync;
 
 #pragma mark - 录制相关
-
-- (UIImage *_Nullable)snapshot;
 
 /// 开始录制视频
 /// @param filePath filePath 保存视频的沙盒路径，必须以.mp4为文件后缀
@@ -116,7 +114,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param status 录制状态
 /// @param filePath 录制的实际路径
 /// @param errCode 错误码，0表示无错误
-- (void)didMediaPlayerRecord:(ZJMediaStreamPlayer *_Nonnull)player status:(ZJ_MEDIA_RECORD_STATUS)status path:(NSString *_Nullable)filePath errCode:(NSInteger)errCode;
+- (void)didMediaPlayerRecord:(ZJMediaStreamPlayer *_Nonnull)player status:(ZJ_MEDIA_RECORD_STATUS)status filePath:(NSString *_Nullable)filePath errCode:(NSInteger)errCode;
 
 @end
 

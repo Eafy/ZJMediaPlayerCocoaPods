@@ -17,7 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// SDK授权Lincese
 /// @param key 授权Key
 /// @param secret 授权secret
-- (BOOL)configWithKey:(NSString *)key secret:(NSString *)secret;
+- (BOOL)configWithKey:(NSString * _Nonnull)key secret:(NSString * _Nonnull)secret;
+
+/// 打开DEBUG模式（仅调试调用才生效）
+- (void)openDebugMode;
 
 @end
 
