@@ -15,6 +15,14 @@
 
 ## 更新日志
 
+**V1.2.2【2022.03.11】**
+
+```
+1、支持React Native版本：react-native-mediaplayer-zj；
+2、Android支持mavenCentral库导入SDK：io.github.eafy:ZJMediaPlayer:+
+3、优化及调整部分功能；
+```
+
 **V1.2.1【2022.03.10】**
 
 ```
