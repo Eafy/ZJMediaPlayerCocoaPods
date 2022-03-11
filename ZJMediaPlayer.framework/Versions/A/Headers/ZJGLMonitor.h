@@ -14,7 +14,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef enum : NSUInteger {
-    ZJGLMonitorDisplayRatioType_Auto = 0,
+    ZJGLMonitorDisplayRatioType_ScaleAspectFit = 0,       //ScaleAspectFit
+    ZJGLMonitorDisplayRatioType_ScaleToFill = 1,
+    ZJGLMonitorDisplayRatioType_ScaleAspectFill = 2,
     ZJGLMonitorDisplayRatioType_1_1,    //正方形
     ZJGLMonitorDisplayRatioType_16_9,
     ZJGLMonitorDisplayRatioType_4_3,

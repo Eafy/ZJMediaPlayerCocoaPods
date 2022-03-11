@@ -22,6 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 打开DEBUG模式（仅调试调用才生效）
 - (void)openDebugMode;
 
+/// 是否认证通过
+- (BOOL)isAuthOK;
+
 @end
 
 NS_ASSUME_NONNULL_END
