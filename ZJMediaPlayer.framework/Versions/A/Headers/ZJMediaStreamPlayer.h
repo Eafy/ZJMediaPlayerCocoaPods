@@ -73,7 +73,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setMediaCacheTime:(NSInteger)cacheTime pursueTime:(NSInteger)pursueTime;
 
 /// 设置降噪级别（0~3），0表示关闭
-/// @param nLevel 级别，默认3
+/// @param nLevel 级别，默认0
 - (void)setDenoiseLevel:(NSUInteger)nLevel;
 
 /// 设置是否音视频同步
