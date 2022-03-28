@@ -72,9 +72,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param pursueTime 设置追赶时间，默认3秒
 - (void)setMediaCacheTime:(NSInteger)cacheTime pursueTime:(NSInteger)pursueTime;
 
-/// 设置降噪级别（0~3），0表示关闭
+/// 设置降噪级别（0~3，0表示关闭）及音频大小增益
 /// @param nLevel 级别，默认0
-- (void)setDenoiseLevel:(NSUInteger)nLevel;
+/// @param gainVolume 增益音量（-50~50），0xFFFF表示关闭
+- (void)setDenoiseLevel:(NSUInteger)nLevel gainVolume:(CGFloat)gainVolume;
 
 /// 设置是否音视频同步
 /// @param sync 是否同步，默认NO
