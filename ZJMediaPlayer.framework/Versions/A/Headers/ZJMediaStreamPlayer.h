@@ -83,7 +83,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 录制相关
 
-/// 开始录制视频
+/// 开始录制视频（支持MP4、FLV、AMR）
 /// @param filePath filePath 保存视频的沙盒路径，必须以.mp4为文件后缀
 - (void)startRecord:(NSString *_Nonnull)filePath;
 
@@ -96,12 +96,17 @@ NS_ASSUME_NONNULL_BEGIN
 /// 获取正在录制视频的时长(毫秒)
 - (long)getRecordDuration;
 
+/// 录制采集的音视频数据
+/// @param filePath 文件路径
+- (void)startRecordCollect:(NSString *_Nonnull)filePath;
+
 @end
 
 @protocol ZJMediaPlayerDelegate <NSObject>
 @optional
 
 /// 视频播放状态
+/// @param player  播放器
 /// @param status 播放状态，JM_MEDIA_PLAY_STATUS，收到调停止接口不会回调
 /// @param errCode 错误码，0表示无错误
 - (void)didMediaPlayerPlay:(ZJMediaStreamPlayer *_Nonnull)player status:(ZJ_MEDIA_PLAY_STATUS)status errCode:(NSInteger)errCode;
@@ -112,10 +117,28 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)didMediaPlayerStatisticalInfo:(ZJMediaStreamPlayer *_Nonnull)player statInfo:(ZJMediaStatisticalInfo *)statInfo;
 
 /// 视频录制回调函数
+/// @param player 播放器
 /// @param status 录制状态
 /// @param filePath 录制的实际路径
 /// @param errCode 错误码，0表示无错误
 - (void)didMediaPlayerRecord:(ZJMediaStreamPlayer *_Nonnull)player status:(ZJ_MEDIA_RECORD_STATUS)status filePath:(NSString *_Nullable)filePath errCode:(NSInteger)errCode;
+
+/// 处理YUV420P数据（若继续内部处理，不允许修改画面宽高）
+/// @param player 播放器
+/// @param yData Y数据
+/// @param uData U数据
+/// @param vData V数据
+/// @param width 宽度
+/// @param height 高度
+/// @return YES：内部继续处理，NO：内部不再处理
+- (BOOL)didMediaPlayerHandleVideoData:(ZJMediaStreamPlayer *_Nonnull)player dataY:(char *)yData dataU:(char *)uData dataV:(char *)vData width:(NSInteger)width height:(NSInteger)height;
+
+/// 处理PCM数据
+/// @param player 播放器
+/// @param pcmData PCM数据
+/// @param size PCM数据长度地址
+/// @return YES：内部继续处理，NO：内部不再处理
+- (BOOL)didMediaPlayerHandleAudioData:(ZJMediaStreamPlayer *_Nonnull)player data:(char *)pcmData size:(NSInteger *)size sampleRate:(NSInteger)sampleRate channels:(NSInteger)channels;
 
 @end
 

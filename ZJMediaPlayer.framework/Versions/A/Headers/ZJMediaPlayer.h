@@ -21,6 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// 重新拉流播放
 - (BOOL)restart;
 
+/// 暂停播放
+- (void)pause;
+
+/// 恢复播放
+- (void)resume;
+
 /// 定位（仅本地文件有效）
 /// @param msTime 毫秒
 - (BOOL)seek:(NSInteger)msTime;
