@@ -103,6 +103,7 @@ typedef enum {
     ZJ_MEDIA_RECORD_STATUS_PATH_INVALID,         //路径无效
     ZJ_MEDIA_RECORD_STATUS_VIDEO_NO_START,      //未开始播放视频
     ZJ_MEDIA_RECORD_STATUS_NO_START,            //录制未真正开始
+    ZJ_MEDIA_RECORD_STATUS_NO_PERMISSION,       //无系统权限
 } ZJ_MEDIA_RECORD_STATUS;
 
 //对讲状态枚举
