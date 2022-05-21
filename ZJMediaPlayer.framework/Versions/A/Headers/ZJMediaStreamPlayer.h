@@ -27,6 +27,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否静音
 @property (nonatomic,assign) BOOL mute;
 
+/// 用户传递的附带信息
+@property (nonatomic,strong) id userInfo;
+/// 播放地址（可能为空）
+@property (nonatomic,copy) NSString *url;
+
 /// 视频播放配置参数
 /// @param config 配置表
 - (BOOL)config:(ZJMediaStreamConfig)config;
