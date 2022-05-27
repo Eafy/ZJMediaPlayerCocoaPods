@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) BOOL hwDecodeEnable;
 /// 是否静音
 @property (nonatomic,assign) BOOL mute;
+/// 播放时，是否关闭免提模式（设置1次只生效1次）
+@property (nonatomic,strong) NSNumber *closeFreeHandsSpeakerVal;
 
 /// 用户传递的附带信息
 @property (nonatomic,strong) id userInfo;
