@@ -81,7 +81,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 设置降噪级别（0~3，0表示关闭）及音频大小增益
 /// @param nLevel 级别，默认0
-/// @param gainVolume 增益音量（-50~50），0xFFFF表示关闭
+/// @param gainVolume 增益音量（-50~50），0xFFFF表示关闭，1表示原声音，0表示静音
 - (void)setDenoiseLevel:(NSUInteger)nLevel gainVolume:(CGFloat)gainVolume;
 
 /// 设置是否音视频同步
