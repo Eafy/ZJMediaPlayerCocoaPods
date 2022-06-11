@@ -1,21 +1,34 @@
 # ZJMediaPlayer
 
+| Plaform | Version | Build Status | License |
+| :-----: | :----------: | :-----: | :-----: |
+|   [![Platform](https://img.shields.io/cocoapods/p/ZJMediaPlayer.svg?style=flat)](https://cocoapods.org/pods/ZJMediaPlayer)    |    [![Version](https://img.shields.io/cocoapods/v/ZJMediaPlayer.svg?style=flat)](https://cocoapods.org/pods/ZJMediaPlayer)         |    [![CI Status](https://img.shields.io/travis/Eafy/ZJMediaPlayer.svg?style=flat)](https://travis-ci.org/Eafy/ZJMediaPlayer)      |  [![License](https://img.shields.io/cocoapods/l/ZJMediaPlayer.svg?style=flat)](https://cocoapods.org/pods/ZJMediaPlayer)     | 
+| [![Platform](https://img.shields.io/badge/platform-Android-lightgrey.svg)](https://img.shields.io/badge/platform-Android-lightgrey.svg) |  <a href='https://search.maven.org/search?q=g:io.github.eafy%20AND%20a:ZJMediaPlayer'><img src='https://img.shields.io/maven-central/v/io.github.eafy/ZJMediaPlayer.svg'></a>     |     <a href='https://travis-ci.org/Eafy/ZJMediaPlayer/builds'><img src='https://api.travis-ci.org/Eafy/ZJMediaPlayer.svg'></a>     |   [![License](https://img.shields.io/cocoapods/l/ZJMediaPlayer.svg?style=flat)](https://cocoapods.org/pods/ZJMediaPlayer)      |
+
+
 **商业授权请联系**：lizhijian_21@163.com
 
 - 支持iOS和Android平台，具备基本一致的功能和接口；
-- 支持常见的H.264、HEVC、AAC、PCM等格式播放；
+- 支持RTMP、RTSP、HLS、本地视频和裸流数据播放；
+- 支持常见的H.264、HEVC、AAC、PCM、SPEEX等格式播放；
 - 支持软硬件解码；
-
-- 支持本地视频播放；
-- 支持网络常用视频协议播放；
-- 支持视频录制及视频截屏；
-- 支持视频纯裸流播放；
-- 支持图片合成视频；
+- 支持网络视频流秒播；
+- 支持视频录制、视频截屏，具备图片合成视频功能；
 - 支持音频降噪和音频增益功能；
 - 支持其他各种功能定制；
 
 
 ## 更新日志
+
+**V1.3.7【2022.06.11】**
+
+```
+1、新增网络流快速播放功能，支持急速秒播；
+2、修复部分音频编码在刚开始播放的时候，因帧率计算错误导致播放延迟卡顿的问题；
+3、修复线程运行状态判断异常，导致可能播放无画面和声音的问题；
+4、添加可设置内部播放器可选参数接口；
+5、新增可设置缓冲时间功能（默认关闭）；
+```
 
 **V1.3.6【2022.06.09】**
 

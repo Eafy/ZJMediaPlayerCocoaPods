@@ -9,6 +9,11 @@
 #ifndef ZJMediaEnum_h
 #define ZJMediaEnum_h
 
+/*视频设置的可选参数*/
+typedef enum {
+    ZJ_MEDIA_OPT_FORMAT = 0,
+} ZJ_MEDIA_OPT_TYPE;
+
 /*转换前的编码格式*/
 typedef enum {
     ZJ_MEDIA_TYPE_NONE = 0,

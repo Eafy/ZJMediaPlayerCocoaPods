@@ -77,7 +77,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 设置播放的缓存队列时间
 /// @param cacheTime 最小的缓存时间，默认1秒
 /// @param pursueTime 设置追赶时间，默认3秒
-- (void)setMediaCacheTime:(NSInteger)cacheTime pursueTime:(NSInteger)pursueTime;
+- (void)setMediaCacheTime:(CGFloat)cacheTime pursueTime:(CGFloat)pursueTime;
 
 /// 设置降噪级别（0~3，0表示关闭）及音频大小增益
 /// @param nLevel 级别，默认0
@@ -85,7 +85,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setDenoiseLevel:(NSUInteger)nLevel gainVolume:(CGFloat)gainVolume;
 
 /// 设置是否音视频同步
-/// @param sync 是否同步，默认NO
+/// @param sync 是否同步，默认YES
 - (void)setMediaSyncMode:(BOOL)sync;
 
 #pragma mark - 录制相关
