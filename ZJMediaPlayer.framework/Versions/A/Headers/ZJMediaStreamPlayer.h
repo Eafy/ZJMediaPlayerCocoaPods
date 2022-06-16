@@ -26,8 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) BOOL hwDecodeEnable;
 /// 是否静音
 @property (nonatomic,assign) BOOL mute;
-/// 播放时，是否关闭免提模式（设置1次只生效1次）
-@property (nonatomic,strong) NSNumber *closeFreeHandsSpeakerVal;
 
 /// 用户传递的附带信息
 @property (nonatomic,strong) id userInfo;
@@ -87,6 +85,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 设置是否音视频同步
 /// @param sync 是否同步，默认YES
 - (void)setMediaSyncMode:(BOOL)sync;
+
+/// 是否开启免提模式（设置1次只生效1次）
+/// @param isSpeakerMode true：扬声器
+/// @param isCallMode 是否是通话模式
+- (void)setSpeakerMode:(NSNumber *)isSpeakerMode isCallMode:(BOOL)isCallMode;
 
 #pragma mark - 录制相关
 

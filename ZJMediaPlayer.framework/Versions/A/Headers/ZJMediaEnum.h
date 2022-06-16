@@ -92,9 +92,10 @@ typedef enum {
     ZJ_MEDIA_PLAY_STATUS_PREPARE,                //准备播放
     ZJ_MEDIA_PLAY_STATUS_START,                  //正在播放
     ZJ_MEDIA_PLAY_STATUS_LOADING,                //正在加载
+    ZJ_MEDIA_PLAY_STATUS_LOADED,                 //加载结束
+    ZJ_MEDIA_PLAY_STATUS_ERROR,                  //播放错误，不一定是播放失败
     ZJ_MEDIA_PLAY_STATUS_STOP,                   //播放结束
     ZJ_MEDIA_PLAY_STATUS_FAILED,                 //播放失败
-    ZJ_MEDIA_PLAY_STATUS_ERROR,                  //播放错误，不一定是播放失败
 } ZJ_MEDIA_PLAY_STATUS;
 
 //视频录制枚举
