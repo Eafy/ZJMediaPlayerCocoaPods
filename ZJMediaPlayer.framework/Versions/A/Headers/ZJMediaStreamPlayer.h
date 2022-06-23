@@ -42,10 +42,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 停止播放
 - (void)stop;
 
-/// 开启视频
+/// 打开视频
 - (void)openVideo;
 
-/// 开启音频
+/// 打开音频
 - (void)openAudio;
 
 /// 关闭视频
