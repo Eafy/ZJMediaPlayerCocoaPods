@@ -11,6 +11,7 @@
 #import "ZJMediaErrno.h"
 #import "ZJGLMonitor.h"
 #import "ZJMediaStatisticalInfo.h"
+#import "ZJAudioAECPlayer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,weak) id<ZJMediaPlayerDelegate> _Nullable delegate;
 /// OpenGL视图(推荐)
 @property (nonatomic,strong) ZJGLMonitor * _Nullable glMonitor;
+/// 音频播放及采集器
+@property (readonly) ZJAudioAECPlayer *audioAECPlayer;
 /// 是否开启硬解码(默认开启，硬解码失败自动切换软解码)
 @property (nonatomic,assign) BOOL hwDecodeEnable;
 /// 是否静音
@@ -86,10 +89,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param sync 是否同步，默认YES
 - (void)setMediaSyncMode:(BOOL)sync;
 
-/// 是否开启免提模式（设置1次只生效1次）
+/// 是否开启免提模式（设置1次只生效1次，停止播放会重置）
 /// @param isSpeakerMode true：扬声器
 /// @param isCallMode 是否是通话模式
 - (void)setSpeakerMode:(NSNumber *)isSpeakerMode isCallMode:(BOOL)isCallMode;
+
+/// 设置麦克风采集回调
+/// @param sampleRate 采样率
+/// @param outHandler PCM数据回调
+- (void)setCollectOutput:(Float64)sampleRate handler:(void (^ __nullable)(NSData *outData))outHandler;
 
 #pragma mark - 录制相关
 
