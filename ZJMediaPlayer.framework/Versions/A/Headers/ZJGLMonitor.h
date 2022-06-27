@@ -37,6 +37,11 @@ typedef enum : NSUInteger {
 /// @param pixelBuffer CVPixelBufferRef
 - (void)displayPixelBuffer:(CVPixelBufferRef)pixelBuffer;
 
+/// 更新解码线性数据
+/// @param linesize 线性数据，一般是宽，高，高
+/// @param lenght 数组长度
+- (void)updateLinesize:(int *)linesize lenght:(int)lenght;
+
 /// 加载YUV420P数据画面
 /// @param yData Y数据
 /// @param uData U数据

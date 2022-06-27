@@ -94,11 +94,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param isCallMode 是否是通话模式
 - (void)setSpeakerMode:(NSNumber *)isSpeakerMode isCallMode:(BOOL)isCallMode;
 
-/// 设置麦克风采集回调
-/// @param sampleRate 采样率
-/// @param outHandler PCM数据回调
-- (void)setCollectOutput:(Float64)sampleRate handler:(void (^ __nullable)(NSData *outData))outHandler;
-
 #pragma mark - 录制相关
 
 /// 开始录制视频（支持MP4、FLV、AMR）
