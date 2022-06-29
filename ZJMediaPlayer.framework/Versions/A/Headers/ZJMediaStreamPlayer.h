@@ -89,10 +89,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param sync 是否同步，默认YES
 - (void)setMediaSyncMode:(BOOL)sync;
 
-/// 是否开启免提模式（设置1次只生效1次，停止播放会重置）
-/// @param isSpeakerMode true：扬声器
-/// @param isCallMode 是否是通话模式
-- (void)setSpeakerMode:(NSNumber *)isSpeakerMode isCallMode:(BOOL)isCallMode;
+/// 通话是否开启免提模式（设置1次只生效1次）
+/// @param isCallSpeaker @(YES)：扬声器
+- (void)setIsCallSpeaker:(NSNumber *)isCallSpeaker;
 
 #pragma mark - 录制相关
 

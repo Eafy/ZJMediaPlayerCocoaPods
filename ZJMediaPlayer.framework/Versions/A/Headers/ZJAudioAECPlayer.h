@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype _Nonnull)shared;
 
-/// 是否开启回音消除（默认关闭）
+/// 是否开启回音消除（默认关闭，中途开启无效）
 @property (nonatomic,assign) BOOL aecEnable;
 /// 设置增益效果数值（默认0）
 @property (nonatomic,assign) Float32 agcValue;
@@ -28,11 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) BOOL isCloseAutoCategory;
 /// 播放模式是否跟随系统静音，默认不开启
 @property (nonatomic,assign) BOOL isSoloAmbient;
-
-/// 是否开启免提模式（设置1次只生效1次）
-/// @param isSpeakerMode true：扬声器
-/// @param isCallMode 是否是通话模式
-- (void)setSpeakerMode:(NSNumber *)isSpeakerMode isCallMode:(BOOL)isCallMode;
+/// 通话是否开启免提模式（设置1次只生效1次），@(YES)：扬声器
+@property (nonatomic,strong) NSNumber *isCallSpeaker;
 
 /// 配置采集信息
 /// @param sampleRate 采样率
