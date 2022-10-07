@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ZJMediaPlayer"
-  s.version      = "1.4.8"
+  s.version      = "1.4.9"
   s.summary      = "ZJ Meida Player SDK for iOS at CocoaPods."
   s.description  = "ZJ Meida Player SDK for iOS at CocoaPods，Supported H.264、Hevc、AAC and other formats."
 
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   
   s.libraries = 'c++','z','bz2','iconv'
   s.frameworks = 'CoreMedia','VideoToolbox','AudioToolbox', 'AVFoundation','OpenGLES','GLKit'
-  s.dependency 'ZJLog', '~> 1.2.2'
+  s.dependency 'ZJLog', '~> 1.2.3'
   
   s.source       = { :git => "https://github.com/Eafy/ZJMediaPlayerCocoaPods.git", :tag => "v#{s.version}" }
   s.ios.vendored_frameworks = "ZJMediaPlayer.framework"
