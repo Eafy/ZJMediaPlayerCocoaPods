@@ -24,8 +24,6 @@ typedef NS_ENUM(NSUInteger, ZJAudioSessionMode) {
 
 - (void)openAudio:(ZJAudioSessionMode)mode handler:(void(^_Nullable)(BOOL success))handler;
 
-- (void)closeAudio:(ZJAudioSessionMode)mode;
-
 @end
 
 NS_ASSUME_NONNULL_END

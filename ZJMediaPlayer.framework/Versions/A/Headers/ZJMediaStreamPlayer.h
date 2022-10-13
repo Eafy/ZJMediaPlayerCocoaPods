@@ -91,7 +91,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 通话是否开启免提模式（设置1次只生效1次）
 /// @param isCallSpeaker @(YES)：扬声器
-- (void)setIsCallSpeaker:(NSNumber *)isCallSpeaker;
+- (void)setIsCallSpeaker:(NSNumber * _Nullable)isCallSpeaker;
 
 #pragma mark - 录制相关
 
