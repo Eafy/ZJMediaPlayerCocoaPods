@@ -46,8 +46,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)collectOutputHandler:(void (^ __nullable)(NSData *outData))outHandler;
 
 /// 麦克风采集的PCM转AAC数据回调
-/// @param complete AAC数据Buffer
-- (void)collectAACOutputHandler:(void (^ __nullable)(NSData *outData))complete;
+/// @param outHandler AAC数据Buffer
+- (void)collectAACOutputHandler:(void (^ __nullable)(NSData *outData))outHandler;
 
 /// 播放输入的PCM数据源回调
 /// @param inHandler 播放输入的数据Buffer

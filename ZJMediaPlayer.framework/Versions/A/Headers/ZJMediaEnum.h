@@ -119,6 +119,7 @@ typedef enum {
     ZJ_MEDIA_TALK_STATUS_START,                  //正在播放
     ZJ_MEDIA_TALK_STATUS_STOP,                   //播放结束
     ZJ_MEDIA_TALK_STATUS_FAILED,                 //对讲失败
+    ZJ_MEDIA_TALK_STATUS_NO_PERMISSION,          //无麦克风权限
 } ZJ_MEDIA_TALK_STATUS;
 
 //多媒体音视频裸流参数配置
