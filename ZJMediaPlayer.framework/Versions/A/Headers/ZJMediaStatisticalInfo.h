@@ -10,7 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /// 视频播放信息(每秒更新1次)
 @interface ZJMediaStatisticalInfo : NSObject
 
@@ -25,7 +24,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) NSInteger videoDropFrame;      //视频丢帧数
 @property (nonatomic,assign) NSInteger onlineCount;         //在线人数（网络流、文件播放等无效）
 
+/// SEI版本号
+@property (nonatomic,assign) NSInteger seiVersion;
+/// 是否有SD卡
+@property (nonatomic,assign) BOOL hasSDCard;
+/// SEI信息中的时间戳
+@property (nonatomic,assign) NSInteger seiTs;
 
 @end
+
 
 NS_ASSUME_NONNULL_END

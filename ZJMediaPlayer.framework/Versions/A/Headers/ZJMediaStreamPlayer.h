@@ -34,6 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) id userInfo;
 /// 播放地址（可能为空）
 @property (nonatomic,copy) NSString *url;
+/// 是否获取SEI信息，0：不获取，1：用户数据，2：内部私有信息
+@property (nonatomic,assign) NSInteger seiInfoType;
 
 /// 视频播放配置参数
 /// @param config 配置表
@@ -151,6 +153,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param size PCM数据长度地址
 /// @return YES：内部继续处理，NO：内部不再处理
 - (BOOL)didMediaPlayerHandleAudioData:(ZJMediaStreamPlayer *_Nonnull)player data:(char *)pcmData size:(NSInteger *)size sampleRate:(NSInteger)sampleRate channels:(NSInteger)channels;
+
+/// 获取SEI信息
+/// @param player 播放器
+/// @param data SEI数据
+/// @param size SEI大小
+- (void)didMediaPlayerRecvSeiInfo:(ZJMediaStreamPlayer *_Nonnull)player data:(uint8_t *)data size:(NSInteger)size;
 
 @end
 
