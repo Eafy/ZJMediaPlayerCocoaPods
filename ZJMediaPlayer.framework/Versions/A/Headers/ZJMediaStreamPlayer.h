@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong) id userInfo;
 /// 播放地址（可能为空）
 @property (nonatomic,copy) NSString *url;
-/// 是否获取SEI信息，0：不获取，1：用户数据，2：内部私有信息
+/// 是否获取SEI信息，0：不获取，1：用户数据，2：内部私有信息(使用statisticalInfo信息)
 @property (nonatomic,assign) NSInteger seiInfoType;
 
 /// 视频播放配置参数

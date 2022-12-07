@@ -26,8 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// SEI版本号
 @property (nonatomic,assign) NSInteger seiVersion;
-/// 是否有SD卡
-@property (nonatomic,assign) BOOL hasSDCard;
+/// 流类型，0：无卡直播，1：直播有卡，2：普通回放有卡，3：告警回放有卡
+@property (nonatomic,assign) NSInteger streamType;
 /// SEI信息中的时间戳
 @property (nonatomic,assign) NSInteger seiTs;
 
