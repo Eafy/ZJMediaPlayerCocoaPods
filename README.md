@@ -20,7 +20,7 @@
 
 ## 更新日志
 
-**V1.5.7~1.5.9【2022.12.23】**
+**V1.5.7~1.5.10【2022.12.23】**
 ```
 1、新增ZJ_MEDIA_OPT_FORMAT的drop_first_bad_frame参数，解决部分视频首次坏I帧导致播放花屏的问题；
 2、新增ZJ_MEDIA_OPT_FORMAT的drop_bad_frame参数，解决部分视频持续坏I帧导致播放花屏的问题；
