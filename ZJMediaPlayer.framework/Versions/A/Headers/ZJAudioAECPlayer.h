@@ -54,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)playIntputHandler:(void (^ __nullable)(NSMutableData *inData))inHandler;
 
 /// 开始播放或采集（若停止过，每次启动都需要重新配置信息参数）
-- (BOOL)start;
+- (void)start:(void(^_Nullable)(BOOL success))handler;
 
 /// 停止采集
 - (void)stopCollect;
