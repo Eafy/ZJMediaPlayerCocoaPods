@@ -24,6 +24,7 @@ typedef enum {
     
     ZJ_MEDIA_TYPE_AAC,
     ZJ_MEDIA_TYPE_PCM,
+    ZJ_MEDIA_TYPE_ADPCM_IMA_WAV,
     
     ZJ_MEDIA_TYPE_MAX
 } ZJ_MEDIA_TYPE;

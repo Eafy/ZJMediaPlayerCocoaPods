@@ -30,6 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) NSInteger streamType;
 /// SEI信息中的时间戳
 @property (nonatomic,assign) NSInteger seiTs;
+/// 视频质量信息
+@property (nonatomic,assign) NSInteger quality;
+
 
 @end
 

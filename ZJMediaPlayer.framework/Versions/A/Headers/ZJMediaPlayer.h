@@ -16,8 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 是否侦测完整视频流（默认开启，谨慎关闭，否则可能无法侦测到音视频流）
 @property (nonatomic, assign) BOOL sniffAllEnable;
-/// 预缓冲时间，默认0，网络视频且具备音频才有效（毫秒）
-@property (nonatomic, assign) NSInteger preCacheDuration;
 
 /// 设置播放器可选参数和值
 /// @param type 类型

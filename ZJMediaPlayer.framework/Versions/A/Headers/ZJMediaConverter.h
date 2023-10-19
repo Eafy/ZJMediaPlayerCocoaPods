@@ -36,6 +36,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param size 数据大小
 - (void)sendAudio:(uint8_t *)data size:(uint32_t)size;
 
+/// 文件转码
+/// @param fromFile 原始文件
+/// @param toFile 输出文件
+- (BOOL)formFile:(NSString *)fromFile toFile:(NSString *)toFile;
+
 @end
 
 NS_ASSUME_NONNULL_END
