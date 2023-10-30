@@ -50,6 +50,9 @@ typedef enum : NSUInteger {
 /// @param height 高度
 - (void)displayYUVData:(const unsigned char*)yData uData:(const unsigned char*)uData vData:(const unsigned char*)vData width:(int)width height:(int)height;
 
+/// 清除画面
+- (void)clear;
+
 @end
 
 NS_ASSUME_NONNULL_END
