@@ -22,6 +22,13 @@ typedef enum : NSUInteger {
     ZJGLMonitorDisplayRatioType_4_3,
 } ZJGLMonitorDisplayRatioType;
 
+typedef enum : NSUInteger {
+    ZJGLMonitorGestureTypeNone = 0,
+    ZJGLMonitorGestureTypeDoubleTap = 1 << 1,       //双击
+    ZJGLMonitorGestureTypePanMove = 1 << 2,         //平移
+    ZJGLMonitorGestureTypeScale = 1 << 3,       //缩放
+} ZJGLMonitorGestureType;
+
 /// ZJGLMonitor视图对模拟器不友好，最好使用真机调试
 @interface ZJGLMonitor : UIView
 
@@ -29,6 +36,14 @@ typedef enum : NSUInteger {
 @property (nonatomic,assign) ZJGLMonitorDisplayRatioType displayRatioType;
 /// 设置图片、获取原始图片
 @property (nonatomic,strong) UIImage *image;
+
+/// 视图手势类型开关，如果需要设置多个，需要1次性设置，不能分开设置
+@property (nonatomic,assign) ZJGLMonitorGestureType gestureType;
+/// 缩放最小倍数，默认1
+@property (nonatomic,assign) CGFloat minScale;
+/// 缩放最大倍数，默认4（双击时倍数/2）
+@property (nonatomic,assign) CGFloat maxScale;
+
 
 /// 截屏
 - (UIImage *)snapshot;

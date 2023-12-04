@@ -95,6 +95,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param isCallSpeaker @(YES)：扬声器
 - (void)setIsCallSpeaker:(NSNumber * _Nullable)isCallSpeaker;
 
+/// 设置音视频延迟播放时间(仅同步模式有效)
+/// @param vDelay 视频延迟时间，默认50
+/// @param aDelay 音频延迟时间，默认0
+- (void)setSyncDelayTime:(NSInteger)vDelay aDelay:(NSInteger)aDelay;
+
 #pragma mark - 录制相关
 
 /// 开始录制视频（支持MP4、FLV、AMR）
