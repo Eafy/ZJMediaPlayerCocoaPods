@@ -78,9 +78,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)clearAudioBuffer;
 
 /// 设置播放的缓存队列时间
+/// @param isLoadMode 是否启动缓冲模式（支持预缓存的功能，加载缓存时间为cacheTime）
 /// @param cacheTime 最小的缓存时间，默认1秒
-/// @param pursueTime 设置追赶时间，默认3秒
-- (void)setMediaCacheTime:(CGFloat)cacheTime pursueTime:(CGFloat)pursueTime;
+/// @param pursueTime 设置追赶时间，默认3秒（启动缓冲模式，则会失效）
+- (void)setMediaLoadMode:(BOOL)isLoadMode cacheTime:(CGFloat)cacheTime pursueTime:(CGFloat)pursueTime;
 
 /// 设置降噪级别（0~3，0表示关闭）及音频大小增益
 /// @param nLevel 级别，默认0
