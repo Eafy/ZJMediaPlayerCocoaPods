@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否侦测完整视频流（默认开启，谨慎关闭，否则可能无法侦测到音视频流）
 @property (nonatomic, assign) BOOL sniffAllEnable;
 
-/// 设置播放器可选参数和值
+/// 设置播放器可选参数和值（停止播放将会清除）
 /// @param type 类型
 /// @param name 名称，如果为nil，则清除已设置的参数
 /// @param value 数值

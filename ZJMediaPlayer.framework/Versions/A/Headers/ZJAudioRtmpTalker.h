@@ -25,6 +25,13 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - channels: 通道数
 - (void)config:(ZJAudioAECPlayer * _Nullable)aecPlayer sampleRate:(NSInteger)sampleRate channels:(NSInteger)channels;
 
+/// 配置推流参数
+/// - Parameters:
+///   - type: 类型
+///   - name: 名称
+///   - value: 值
+- (void)config:(ZJ_MEDIA_OPT_TYPE)type name:(NSString * _Nullable)name value:(NSString * _Nonnull)value;
+
 /// 开始初始化并推送数据
 /// - Parameter url: RTMP地址
 - (void)startTalk:(NSString *)url;
