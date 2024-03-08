@@ -28,8 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) BOOL isCloseAutoCategory;
 /// 播放模式是否跟随系统静音，默认不开启
 @property (nonatomic,assign) BOOL isSoloAmbient;
-/// 通话是否开启免提模式（设置1次只生效1次），@(YES)：扬声器
-@property (nonatomic,strong) NSNumber *isCallSpeaker;
+/// 通话是否开启免提模式（设置1次只生效1次， -1：不启动，0：不开启，1：开启
+@property (nonatomic,assign) NSInteger callSpeakerMode;
 
 /// 配置采集信息
 /// @param sampleRate 采样率

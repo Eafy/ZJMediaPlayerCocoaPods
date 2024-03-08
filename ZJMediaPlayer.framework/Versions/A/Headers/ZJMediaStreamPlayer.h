@@ -93,8 +93,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setMediaSyncMode:(BOOL)sync;
 
 /// 通话是否开启免提模式（设置1次只生效1次）
-/// @param isCallSpeaker @(YES)：扬声器
-- (void)setIsCallSpeaker:(NSNumber * _Nullable)isCallSpeaker;
+/// @param callMode -1：不启动，0：不开启，1：开启
+- (void)setCallSpeakerModel:(NSInteger)callMode;
 
 /// 设置音视频延迟播放时间(仅同步模式有效)
 /// @param vDelay 视频延迟时间，默认50
