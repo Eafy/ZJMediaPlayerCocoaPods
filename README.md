@@ -6,7 +6,7 @@
 | [![Platform](https://img.shields.io/badge/platform-Android-lightgrey.svg)](https://img.shields.io/badge/platform-Android-lightgrey.svg) |  <a href='https://search.maven.org/search?q=g:io.github.eafy%20AND%20a:ZJMediaPlayer'><img src='https://img.shields.io/maven-central/v/io.github.eafy/ZJMediaPlayer.svg'></a>     |     <a href='https://travis-ci.org/Eafy/ZJMediaPlayer/builds'><img src='https://api.travis-ci.org/Eafy/ZJMediaPlayer.svg'></a>     |   [![License](https://img.shields.io/cocoapods/l/ZJMediaPlayer.svg?style=flat)](https://cocoapods.org/pods/ZJMediaPlayer)      |
 
 
-**商业授权请联系**：lizhijian_21@163.com
+**商业授权或试用请联系**：lizhijian_21@163.com
 
 - 支持iOS和Android平台，具备基本一致的功能和接口；
 - 支持RTMP、RTSP、HLS、本地视频和裸流数据播放；
@@ -19,6 +19,15 @@
 
 
 ## 更新日志
+
+**V1.7.9【2024.03.13】**
+
+```
+1、播放失败或停止之后，不再上报播放信息；
+2、修复播放模式，声音输出默认为耳麦不是扬声器的问题；
+3、修复解码视频或音频失败，未上报失败的问题；
+4、修复初始化解码器失败，未正常释放资源导致下次播放无法解码的问题；
+```
 
 **V1.7.8【2024.03.08】**
 
