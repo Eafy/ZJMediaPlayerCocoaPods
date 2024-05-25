@@ -31,6 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 通话是否开启免提模式（设置1次只生效1次， -1：不启动，0：不开启，1：开启
 @property (nonatomic,assign) NSInteger callSpeakerMode;
 
+@property (readonly) AudioStreamBasicDescription playDescription;
+@property (readonly) AudioStreamBasicDescription collectDescription;
+
 /// 配置采集信息
 /// @param sampleRate 采样率
 /// @param channels 通道数
