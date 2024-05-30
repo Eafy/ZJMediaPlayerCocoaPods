@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) BOOL aecEnable;
 /// 设置增益效果数值（默认0）
 @property (nonatomic,assign) Float32 agcValue;
-/// 数据包输出大小（默认0，表示由系统控制）
+/// PCM数据包输出大小（默认0，表示由系统控制）
 @property (nonatomic,assign) UInt32 dataPktSize;
 /// 回音消除是否有效
 @property (nonatomic,assign,readonly) BOOL isAecValid;
@@ -30,6 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) BOOL isSoloAmbient;
 /// 通话是否开启免提模式（设置1次只生效1次， -1：不启动，0：不开启，1：开启
 @property (nonatomic,assign) NSInteger callSpeakerMode;
+/// 输出音量大小[0~100]，默认-1，表示不设置
+@property (nonatomic,assign) CGFloat volume;
 
 @property (readonly) AudioStreamBasicDescription playDescription;
 @property (readonly) AudioStreamBasicDescription collectDescription;
@@ -73,6 +75,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 清除播放缓存数据
 - (void)clearPlayBuffer;
+
+/// 播放音频数据
+/// - Parameters:
+///   - buf: 数据源
+///   - size: 大小
+- (BOOL)play:(NSData *)data;
+
+/// 设置声音音量大小增益及降噪级别
+/// - Parameters:
+///   - gainVolume: 大小增益[-50,50]，0：关闭
+///   - denoiseLevel: 降噪级别[-1,3]，-1：关闭
+- (void)setGainVolume:(CGFloat)gainVolume denoiseLevel:(NSInteger)denoiseLevel;
 
 @end
 

@@ -42,6 +42,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否正在对讲
 - (BOOL)isTalking;
 
+/// 设置PCM音频输出包大小
+/// - Parameter size: 一包大小
+- (void)setDataPkgSize:(NSInteger)size;
+
 @end
 
 #pragma mark - ZJAudioRtmpTalkerDelegate
