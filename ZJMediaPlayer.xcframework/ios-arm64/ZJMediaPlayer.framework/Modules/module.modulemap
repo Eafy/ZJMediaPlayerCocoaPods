@@ -1,0 +1,6 @@
+framework module ZJMediaPlayer {
+  umbrella header "ZJMediaPlayer.h"
+  export *
+
+  module * { export * }
+}

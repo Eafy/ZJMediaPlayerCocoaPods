@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ZJMediaPlayer"
-  s.version      = "1.7.12-b"
+  s.version      = "1.7.12-c"
   s.summary      = "ZJ Meida Player SDK for iOS at CocoaPods."
   s.description  = "ZJ Meida Player SDK for iOS at CocoaPods，Supported H.264、Hevc、AAC and other formats."
 
@@ -11,11 +11,13 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.pod_target_xcconfig = {
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-    'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'armv7s armv7'
+    'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'armv7s armv7',
+    'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES'
   }
   s.user_target_xcconfig = {
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-    'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'armv7s armv7'
+    'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'armv7s armv7',
+    'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES'
   }
   
   s.libraries = 'c++','z','bz2','iconv'
@@ -23,8 +25,9 @@ Pod::Spec.new do |s|
   s.dependency 'ZJLog', '~> 1.2.3'
   
   s.source       = { :git => "https://github.com/Eafy/ZJMediaPlayerCocoaPods.git", :tag => "v#{s.version}" }
-  s.ios.vendored_frameworks = "ZJMediaPlayer.framework"
-  s.vendored_libraries = 'ZJMediaPlayer.framework/**/*.a'
+#  s.ios.vendored_frameworks = "ZJMediaPlayer.framework"
+  #s.vendored_libraries = 'ZJMediaPlayer.framework/**/*.a'
+  s.ios.vendored_frameworks = "ZJMediaPlayer.xcframework"
 
 end
 
