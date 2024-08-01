@@ -1,24 +1,14 @@
 Pod::Spec.new do |s|
   s.name         = "ZJMediaPlayer"
-  s.version      = "1.7.12-c"
+  s.version      = "1.7.12-d"
   s.summary      = "ZJ Meida Player SDK for iOS at CocoaPods."
   s.description  = "ZJ Meida Player SDK for iOS at CocoaPods，Supported H.264、Hevc、AAC and other formats."
 
   s.homepage     = "https://github.com/Eafy/ZJMediaPlayerCocoaPads"
   s.license      = { :type => "Apache License 2.0" }
   s.author       = { "Eafy" => "lizhijian_21@163.com" }
-  s.platform     = :ios, "11.0"
+  s.platform     = :ios, "12.0"
   s.requires_arc = true
-  s.pod_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-    'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'armv7s armv7',
-    'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES'
-  }
-  s.user_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-    'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'armv7s armv7',
-    'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES'
-  }
   
   s.libraries = 'c++','z','bz2','iconv'
   s.frameworks = 'CoreMedia','VideoToolbox','AudioToolbox', 'AVFoundation','OpenGLES','GLKit'
